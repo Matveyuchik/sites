@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <title>Rubbish Solar System</title>
+    </head>
+    <body>
+        <h1 class="header" id="sigma">RUBBISH SOLAR SYSTEM</h1>
+
+        <div class="solar-system" id="solar-system">
+            
+            <div class="sun trash" id="sun">
+                <span class="trash-emoji">🗑️</span>
+                <span class="label">SUN</span>
+                <div class="trash-particles"></div>
+            </div>
+            
+            
+            <div class="orbit orbit-1">
+                <div class="planet trash" id="mercury">
+                    <span class="trash-emoji">🥫</span>
+                    <span class="label">Mercury</span>
+                </div>
+            </div>
+            
+            <div class="orbit orbit-2">
+                <div class="planet trash" id="venus">
+                    <span class="trash-emoji">🧃</span>
+                    <span class="label">VENUS</span>
+                </div>
+            </div>
+            
+            <div class="orbit orbit-3">
+                <div class="planet trash" id="earth">
+                    <span class="trash-emoji">🌍</span>
+                    <span class="label">EARTH</span>
+                    <div class="moon trash">
+                        <span class="trash-emoji">🧴</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="orbit orbit-4">
+                <div class="planet trash" id="mars">
+                    <span class="trash-emoji">🔋</span>
+                    <span class="label">MARS</span>
+                </div>
+            </div>
+            
+            <div class="orbit orbit-5">
+                <div class="planet trash" id="jupiter">
+                    <span class="trash-emoji">📦</span>
+                    <span class="label">JUPITER</span>
+                </div>
+            </div>
+    
+            <div class="asteroid-belt">
+                <div class="asteroid">🍾</div>
+                <div class="asteroid">🥤</div>
+                <div class="asteroid">🧪</div>
+                <div class="asteroid">📰</div>
+                <div class="asteroid">🧻</div>
+            </div>
+        </div>
+
+        <div class="trash-counter" id="trash-counter">
+            <span>RUBBISH IN SYSTEM: <span id="trash-count">0</span></span>
+            <button onclick="addTrash()">➕ ADD MORE RUBBISH</button>
+        </div>
+    </body>
+</html>
