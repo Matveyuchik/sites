@@ -1,0 +1,145 @@
+body {
+    font-family: "Cormorant";
+    background-color: black;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: enter 0.6s ease-out forwards;
+    text-align: center;
+}
+
+@keyframes enter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.begin {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+.dossier {
+    display: none;
+    text-align: left; 
+    font-size: 19px;
+    background-color: wheat;
+    border: 4px solid grey;
+    margin-top: 50px;
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 600px;
+    width: 90%; 
+    font-family: 'Courier New', Courier, monospace;
+    padding: 30px; 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); 
+}
+
+/* Заголовок досье */
+.dossier h1 {
+    text-align: center;
+    border-bottom: 2px solid grey;
+    padding-bottom: 15px;
+    margin-top: 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+/* Контейнер для фото */
+.dossier .photo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#photo {
+    width: 200px;
+    height: 300px;
+    border: 3px solid grey;
+    border-radius: 10px;
+    object-fit: cover; /* Чтобы фото не искажалось */
+}
+
+/* Подпись под фото */
+.photo-caption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin: 5px 0 20px;
+}
+
+/* Стили для полей досье */
+.dossier p {
+    font-style: normal;
+    font-weight: bold;
+    margin: 15px 0 5px;
+    color: #333;
+    border-left: 3px solid grey;
+    padding-left: 10px;
+}
+
+/* Значения полей */
+.dossier p + br + * {
+    font-style: italic;
+}
+
+/* Добавляем отступы для текста между тегами p */
+.dossier br + br {
+    display: none; /* Убираем лишние переносы */
+}
+
+#toggleDossier {
+    display: none;
+}
+
+.toggle-input:checked ~ .dossier {
+    display: block;
+}
+
+.toggle-btn {
+    align-content: center;
+    color: white;
+    cursor:pointer;
+    font-size: 20px;
+    margin-top: 100px;
+}
+
+#toggleDossier:checked ~ .toggle-btn {
+    background-color: #4a4a4a;
+    border-color: wheat;
+    color: wheat;
+}
+
+.dossier p {
+    font-style:oblique;
+}
+
+button {
+    background-color: black;
+    color: white;
+    cursor:pointer;
+}
+
+/* KISS-спецэффекты */
+.kiss-mode .dossier {
+    border-color: #ffd700;
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+    animation: kissPulse 2s infinite;
+}
+
+.kiss-mode .toggle-btn {
+    background: linear-gradient(145deg, #000, #8b0000);
+    border-color: #ffd700;
+    color: #ffd700;
+    animation: kissGlow 1s infinite alternate;
+}
+
+@keyframes kissPulse {
+    0%, 100% { box-shadow: 0 0 30px rgba(255, 215, 0, 0.3); }
+    50% { box-shadow: 0 0 60px rgba(255, 0, 0, 0.5); }
+}
+
+@keyframes kissGlow {
+    from { text-shadow: 0 0 5px gold; }
+    to { text-shadow: 0 0 20px gold; }
+}
