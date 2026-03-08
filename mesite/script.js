@@ -1,7 +1,6 @@
 let kiss = new Audio("kiss.mp3");
 kiss.volume = .5;
 
-// Добавим ещё треков (найди их)
 let kissSongs = {
     'rock': new Audio("kiss.mp3"),
 };
@@ -13,15 +12,15 @@ function activateKissMode() {
     
     kissModeActivated = true;
     
-    // 1. Играем главный трек
+   
     kiss.play();
     
-    // 2. Меняем фон на KISS
+    
     document.body.style.backgroundImage = "url('kiss.jpg')";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     
-    // 3. Добавляем логотип KISS
+    
     const logo = document.createElement('div');
     logo.innerHTML = "KISS";
     logo.style.cssText = `
@@ -39,10 +38,10 @@ function activateKissMode() {
     `;
     document.body.appendChild(logo);
     
-    // 4. Добавляем грим на лицо (шутка, просто эффекты)
+    
     document.body.style.boxShadow = "inset 0 0 100px rgba(255, 215, 0, 0.5)";
     
-    // 5. Конфетти (если хочешь)
+    
     for(let i = 0; i < 50; i++) {
         setTimeout(() => {
             const confetti = document.createElement('div');
@@ -62,10 +61,10 @@ function activateKissMode() {
         }, i * 100);
     }
     
-    // 6. Меняем заголовок
+    
     document.title = "KISS MODE ACTIVATED";
     
-    // 7. Анимация для всего
+    
     const style = document.createElement('style');
     style.textContent = `
         @keyframes kissFloat {
@@ -81,11 +80,11 @@ function activateKissMode() {
     `;
     document.head.appendChild(style);
     
-    // 8. Предупреждение
+    
     alert("KISS MODE ACTIVATED\nROCK & ROLL ALL NIGHT!");
 }
 
-// Или по нажатию клавиши K
+
 document.addEventListener('keydown', (e) => {
     if(e.key === 'k' || e.key === 'K') {
         activateKissMode();
